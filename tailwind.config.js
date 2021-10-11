@@ -1,0 +1,36 @@
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    container: {
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '1024px',
+        xl: '1200px',
+        '2xl': '1760px'
+     },
+     padding: {
+        DEFAULT: '0px',
+        sm: '0px',
+        md: '0px',
+        lg: '40px',
+        xl: '80px'
+      },
+      colors: {
+        'lh-jungle-green': '#012D26',
+        'lh-jungle-gren-gray': '#5B6866',
+        'lh-sky-blue': '#3948FF'
+      }
+    },
+    extend: {
+      transitionProperty: {
+        'left': 'left'
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: []
+}

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "SilkaRegular";
+    src: local("SilkaRegular"),
+     url(./assets/fonts/silka-regular-webfont.ttf) format("truetype");
+}
+
+html, body {
+    font-family: "SilkaRegular", "Verdana";
+    color: #012D26;
+}
