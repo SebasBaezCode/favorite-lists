@@ -16,21 +16,24 @@ module.exports = {
         md: '0px',
         lg: '40px',
         xl: '80px'
-      },
-      colors: {
-        'lh-jungle-green': '#012D26',
-        'lh-jungle-gren-gray': '#5B6866',
-        'lh-sky-blue': '#3948FF'
       }
     },
     extend: {
+      colors: {
+        'lh-jungle-green': '#012D26',
+        'lh-jungle-gren-gray': '#5B6866',
+        'lh-sky-blue': '#3948FF',
+        'lh-blue': '#EBEDFF'
+      },
       transitionProperty: {
         'left': 'left'
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      colors: {}
+    },
   },
   plugins: []
 }

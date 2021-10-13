@@ -1,12 +1,12 @@
 <template>
-    <header id="ls-main-header" class="border-b">
+    <header id="ls-main-header" class="border-b relative z-10">
         <nav id="lh-main-navigation-bar" class="container m-auto lg:flex lg:justify-between lg:items-center lg:pt-1 lg:pb-1">
             <div class="logo-wrapper p-3 pl-8 pr-8
                         lg:p-0">
                 <router-link to="/">
                     <img src="@/assets/img/logo.svg" title="La Haus" class="hidden" alt="La Haus logo">
                     <div class="flex">
-                        <button type="button" class="mr-2 lg:hidden" @click="toggleMobileMenu()">
+                        <button type="button" class="mr-2 with-dot with-dot-bars flex lg:hidden" @click="toggleMobileMenu()">
                             <img src="@/assets/img/bars.svg" alt="La Haus open menu">
                         </button>
                         <img src="@/assets/img/logo-mobile.svg" title="La Haus" alt="La Haus logo">
@@ -34,7 +34,12 @@
                     </ul>
                     <ul class="menu menu-profile border-b py-4 px-4
                               lg:border-b-0 lg:p-0">
-                        <span class="cursor-pointer hidden lg:block">Mi perfil</span>
+                        <div class="cursor-pointer hidden lg:flex">
+                            Mi perfil
+                            <div class="with-dot flex">
+                                <img src="@/assets/img/icon-arrow-down.svg" class="ml-2" alt="Open">
+                            </div>
+                        </div>
                         <ul class="lg:hidden">
                             <li>Para ti</li>
                             <li>Guardados</li>
@@ -93,6 +98,27 @@ export default {
 
     .menus-wrapper {
         li { padding: 0.75rem 2rem; cursor: pointer; }
+    }
+
+    .with-dot {
+        position: relative;
+        align-items: center;
+
+        &::before {
+            content: '';
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            background-color: #3ECFAF;
+            position: absolute;
+            right: -10px;
+            top: -5px;
+        }
+    }
+    .with-dot-bars {
+        &::before {
+            right: -5px;
+        }
     }
 
     @media (min-width: 1024px) {

@@ -12,6 +12,10 @@ export default {
   name: 'Home',
   components: {
     FavoriteList
+  },
+  metaInfo: {
+    title: 'Lista de favoritos - Prueba técnica',
+    description: 'Prueba técnica - Maquetacion para La Haus'
   }
 }
 </script>
