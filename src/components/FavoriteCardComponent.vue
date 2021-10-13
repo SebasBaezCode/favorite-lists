@@ -1,5 +1,5 @@
 <template>
-    <div class="favorite-card mx-auto cursor-pointer" :title="listData.name">
+    <div class="favorite-card w-full mx-auto cursor-pointer" :title="listData.name">
         <div class="img-wrapper relative flex mb-5 rounded-lg bg-cover bg-no-repeat bg-center" :class="listClass">
             <div v-for="(galleryItem, index) in this.listGallery" 
                 :key="index" 
